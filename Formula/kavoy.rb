@@ -24,7 +24,15 @@ class Kavoy < Formula
   end
 
   def install
+    if File.exist?("kavoy")
+      bin.install "kavoy"
+      bin.install "kavoy-relay"
+      return
+    end
+
     release_dir = Dir["kavoy-*"].find { |path| File.directory?(path) }
+    odie "release archive does not contain Kavoy binaries" unless release_dir
+
     bin.install "#{release_dir}/kavoy"
     bin.install "#{release_dir}/kavoy-relay"
   end
