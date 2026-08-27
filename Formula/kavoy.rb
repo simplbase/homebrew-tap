@@ -1,7 +1,6 @@
 class Kavoy < Formula
   desc "Portable private state for software projects"
   homepage "https://github.com/simplbase/kavoy"
-  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
