@@ -1,25 +1,25 @@
 class Kavoy < Formula
   desc "Portable private state for software projects"
   homepage "https://github.com/simplbase/kavoy"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/simplbase/kavoy/releases/download/v0.1/kavoy-v0.1-aarch64-apple-darwin.tar.gz"
-      sha256 "3bbf40a9b087cc22546487bdc9aed2d92efed6514d4b7c6b63ea8e1b75398521"
+      url "https://github.com/simplbase/kavoy/releases/download/v0.1.1/kavoy-v0.1.1-aarch64-apple-darwin.tar.gz"
+      sha256 "87f32f94f29fc762e3bcff82c8065b44f74f84d92309db1cd2dd93ffaa77a04e"
     end
 
     on_intel do
-      url "https://github.com/simplbase/kavoy/releases/download/v0.1/kavoy-v0.1-x86_64-apple-darwin.tar.gz"
-      sha256 "c5bd9228e57ad7261a7dca841f3adb5da9d5e0e2d3f4f2a02af5e7684d25c354"
+      url "https://github.com/simplbase/kavoy/releases/download/v0.1.1/kavoy-v0.1.1-x86_64-apple-darwin.tar.gz"
+      sha256 "9ebc789abe4d1224f94d158adc5b9a08ae193056980e1e22aa243120acdc8ec6"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/simplbase/kavoy/releases/download/v0.1/kavoy-v0.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "6b7c751bdfc4555b1e50070e278ec7292b95bcc3d73715791ee05e8120b342da"
+      url "https://github.com/simplbase/kavoy/releases/download/v0.1.1/kavoy-v0.1.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "4f1bf77da5578d3431791d90333c25348c4ed48e609f311ebec3894f621ceba1"
     end
   end
 
@@ -38,7 +38,7 @@ class Kavoy < Formula
   end
 
   test do
-    assert_match "kavoy 0.1.0", shell_output("#{bin}/kavoy version")
-    assert_match "kavoy-relay 0.1.0", shell_output("#{bin}/kavoy-relay version")
+    assert_match "kavoy 0.1.1", shell_output("#{bin}/kavoy version")
+    assert_match "kavoy-relay 0.1.1", shell_output("#{bin}/kavoy-relay version")
   end
 end
